@@ -1,0 +1,40 @@
+* i3-grid
+i3-grid is a python package that allows 2 dimensional movement through i3 workspaces.
+** Configuration
+*** i3-grid Configuration
+In the future there will be a dedicated configuration file for changing elements of i3-grid however right now i3-grid will function as if you are using a 3x3 grid. As of now to change the grid size you must edit [[./i3grid/i3_grid.py][i3_grid.py]] size.
+*** i3 Configuration
+In order to move through workspaces the commands must be bound to keybindings in the i3 configuration file. This is an example configuration:
+#+begin_example
+# change workspace (grid)
+bindsym $mod+Control+h exec i3-grid 'l'
+bindsym $mod+Control+j exec i3-grid 'd'
+bindsym $mod+Control+k exec i3-grid 'u'
+bindsym $mod+Control+l exec i3-grid 'r'
+
+# change workspace, cursor keys (grid)
+bindsym $mod+Control+Left exec i3-grid 'l'
+bindsym $mod+Control+Down exec i3-grid 'd'
+bindsym $mod+Control+Up exec i3-grid 'u'
+bindsym $mod+Control+Right exec i3-grid 'r'
+#+end_example
+** Usage
+Move your workspace left.
+#+begin_example
+i3-grid 'l'
+#+end_example
+
+Move your workspace down.
+#+begin_example
+i3-grid 'd'
+#+end_example
+
+Move your workspace up.
+#+begin_example
+i3-grid 'u'
+#+end_example
+
+Move your workspace right.
+#+begin_example
+i3-grid 'r'
+#+end_example
